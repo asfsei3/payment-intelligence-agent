@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #08110d;
+  --bg-elev: #0c1a13;
+  --bg-card: #10231a;
+  --border-soft: rgba(212, 175, 55, 0.12);
+  --border-stronger: rgba(212, 175, 55, 0.24);
+}
+
+html,
+body {
+  background: radial-gradient(
+      1200px 600px at 0% -10%,
+      rgba(26, 71, 49, 0.55),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 100% 0%,
+      rgba(201, 168, 76, 0.10),
+      transparent 60%
+    ),
+    var(--bg-base);
+  color: #e8efe9;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl bg-ink-800/70 backdrop-blur-sm border border-gold-500/10 shadow-card;
+  }
+
+  .card-elev {
+    @apply rounded-xl bg-gradient-to-b from-ink-700/80 to-ink-800/80 backdrop-blur-sm border border-gold-500/15 shadow-card;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold text-ink-950 bg-gradient-to-b from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 transition shadow-glow disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium text-moss-100 border border-gold-500/25 hover:border-gold-500/50 hover:bg-ink-700/50 transition;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm text-moss-200 hover:text-gold-300 hover:bg-ink-700/40 transition;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .badge-ok       { @apply badge bg-moss-400/15 text-moss-200 border border-moss-400/30; }
+  .badge-warn     { @apply badge bg-warn/15 text-warn border border-warn/30; }
+  .badge-danger   { @apply badge bg-danger/15 text-danger border border-danger/30; }
+  .badge-gold     { @apply badge bg-gold-500/15 text-gold-300 border border-gold-500/30; }
+  .badge-muted    { @apply badge bg-ink-700 text-moss-200 border border-ink-600; }
+
+  .section-title {
+    @apply text-xs uppercase tracking-[0.18em] text-gold-400/80;
+  }
+
+  .heading-1 {
+    @apply text-3xl md:text-4xl font-semibold text-moss-100 tracking-tight;
+  }
+  .heading-2 {
+    @apply text-xl md:text-2xl font-semibold text-moss-100 tracking-tight;
+  }
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(58, 125, 89, 0.3);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(58, 125, 89, 0.5); }
+::-webkit-scrollbar-track { background: transparent; }

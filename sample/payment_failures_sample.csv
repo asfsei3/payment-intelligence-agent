@@ -1,0 +1,81 @@
+transaction_id,customer_id,amount,currency,failed_at,error_code,error_message,attempt_count,last_success_at,subscription_status
+txn_2026_10001,cus_1001,4980,JPY,2026-05-06T18:42:52Z,temporary_failure,Temporary processing failure,2,2026-04-25T07:48:00Z,active
+txn_2026_10002,cus_1002,9800,JPY,2026-05-03T20:39:00Z,processing_error,Processing error,2,2026-04-27T20:04:00Z,active
+txn_2026_10003,cus_1003,1980,JPY,2026-05-19T05:34:07Z,card_declined_authentication,Issuer declined authentication,1,2026-04-13T00:44:00Z,active
+txn_2026_10004,cus_1004,980,JPY,2026-05-19T06:05:19Z,insufficient_funds,Insufficient funds,2,2026-04-18T08:15:00Z,active
+txn_2026_10005,cus_1005,9800,JPY,2026-05-23T12:49:28Z,card_update_required,Card network signaled update required,1,2026-04-22T03:57:00Z,active
+txn_2026_10006,cus_1006,4980,JPY,2026-05-05T00:52:01Z,expired_card,Card has expired,3,2026-04-14T16:54:00Z,active
+txn_2026_10007,cus_1007,2980,JPY,2026-05-14T21:50:43Z,expired_card,Card has expired,4,2026-04-24T07:03:00Z,active
+txn_2026_10008,cus_1008,14800,JPY,2026-05-03T00:58:58Z,lost_card,Lost card reported,2,2026-04-06T16:50:00Z,canceled
+txn_2026_10009,cus_1009,14800,JPY,2026-05-19T18:41:32Z,expired_card,Card has expired,1,2026-04-09T05:53:00Z,past_due
+txn_2026_10010,cus_1010,2980,JPY,2026-05-25T09:44:35Z,card_declined_authentication,Issuer declined authentication,4,2026-04-20T01:58:00Z,active
+txn_2026_10011,cus_1011,1980,JPY,2026-05-05T16:13:24Z,network_error,Network timeout to issuer,2,2026-04-24T14:33:00Z,trialing
+txn_2026_10012,cus_1012,1980,JPY,2026-05-21T20:54:20Z,payment_method_required,Customer has no active payment method,2,2026-04-02T17:54:00Z,active
+txn_2026_10013,cus_1013,14800,JPY,2026-05-18T16:08:05Z,insufficient_funds,Insufficient funds,1,2026-04-07T09:08:00Z,active
+txn_2026_10014,cus_1014,980,JPY,2026-05-12T12:53:55Z,stolen_card,Stolen card reported,2,2026-04-15T22:33:00Z,canceled
+txn_2026_10015,cus_1015,1980,JPY,2026-05-25T10:14:58Z,card_update_required,Card network signaled update required,1,2026-04-26T00:01:00Z,active
+txn_2026_10016,cus_1016,980,JPY,2026-05-22T07:48:06Z,unknown,Unknown error,3,2026-04-17T04:49:00Z,active
+txn_2026_10017,cus_1017,2980,JPY,2026-05-05T23:30:27Z,insufficient_funds,Insufficient funds,2,2026-04-15T07:17:00Z,active
+txn_2026_10018,cus_1018,4980,JPY,2026-05-07T18:30:44Z,network_error,Network timeout to issuer,1,2026-04-25T02:56:00Z,active
+txn_2026_10019,cus_1019,2980,JPY,2026-05-13T16:54:47Z,invalid_card,Invalid card details,2,2026-04-06T22:53:00Z,paused
+txn_2026_10020,cus_1020,2980,JPY,2026-05-15T11:57:09Z,expired_card,Card has expired,3,2026-04-23T10:31:00Z,active
+txn_2026_10021,cus_1021,14800,JPY,2026-05-06T07:54:25Z,unknown,Unknown error,4,2026-04-28T15:17:00Z,paused
+txn_2026_10022,cus_1022,29800,JPY,2026-05-23T23:04:45Z,invalid_card,Invalid card details,1,2026-04-24T03:02:00Z,past_due
+txn_2026_10023,cus_1023,4980,JPY,2026-05-21T20:23:12Z,expired_card,Card has expired,4,2026-04-30T20:26:00Z,past_due
+txn_2026_10024,cus_1024,14800,JPY,2026-05-06T20:17:31Z,fraudulent,Suspected fraud,1,2026-04-11T08:19:00Z,past_due
+txn_2026_10025,cus_1025,14800,JPY,2026-05-16T19:00:12Z,authentication_required,3D Secure authentication required,3,2026-04-29T00:34:00Z,active
+txn_2026_10026,cus_1026,4980,JPY,2026-05-07T05:04:14Z,processing_error,Processing error,2,2026-04-01T05:18:00Z,active
+txn_2026_10027,cus_1027,2980,JPY,2026-05-19T22:04:36Z,card_update_required,Card network signaled update required,3,2026-04-01T08:04:00Z,active
+txn_2026_10028,cus_1028,1980,JPY,2026-05-03T10:22:24Z,insufficient_funds,Insufficient funds,2,2026-04-12T18:23:00Z,past_due
+txn_2026_10029,cus_1029,4980,JPY,2026-05-11T12:43:12Z,expired_card,Card has expired,1,2026-04-17T20:52:00Z,active
+txn_2026_10030,cus_1030,980,JPY,2026-05-11T02:54:13Z,processing_error,Processing error,2,2026-04-23T11:29:00Z,active
+txn_2026_10031,cus_1031,980,JPY,2026-05-07T21:27:34Z,issuer_unavailable,Issuer temporarily unavailable,3,2026-04-08T19:33:00Z,active
+txn_2026_10032,cus_1032,4980,JPY,2026-05-06T22:15:11Z,insufficient_funds,Insufficient funds,2,2026-04-02T07:12:00Z,past_due
+txn_2026_10033,cus_1033,4980,JPY,2026-05-18T07:42:56Z,expired_card,Card has expired,4,2026-04-15T11:41:00Z,active
+txn_2026_10034,cus_1034,1980,JPY,2026-05-05T20:49:25Z,insufficient_funds,Insufficient funds,2,2026-04-26T20:10:00Z,past_due
+txn_2026_10035,cus_1035,2980,JPY,2026-05-20T11:52:23Z,card_declined_authentication,Issuer declined authentication,4,2026-04-17T16:30:00Z,active
+txn_2026_10036,cus_1036,2980,JPY,2026-05-17T16:13:22Z,card_update_required,Card network signaled update required,2,2026-04-14T10:22:00Z,past_due
+txn_2026_10037,cus_1037,2980,JPY,2026-05-02T08:48:28Z,fraudulent,Suspected fraud,1,2026-04-03T05:37:00Z,paused
+txn_2026_10038,cus_1038,29800,JPY,2026-05-24T07:10:51Z,fraudulent,Suspected fraud,1,2026-04-23T20:08:00Z,paused
+txn_2026_10039,cus_1039,14800,JPY,2026-05-01T10:27:26Z,expired_card,Card has expired,1,2026-04-29T02:31:00Z,active
+txn_2026_10040,cus_1040,980,JPY,2026-05-13T16:34:07Z,do_not_honor,Issuer declined: do not honor,3,2026-04-28T11:39:00Z,active
+txn_2026_10041,cus_1041,2980,JPY,2026-05-26T21:07:55Z,do_not_honor,Issuer declined: do not honor,2,2026-04-22T14:08:00Z,active
+txn_2026_10042,cus_1042,29800,JPY,2026-05-10T23:46:10Z,card_declined_authentication,Issuer declined authentication,1,2026-04-29T14:39:00Z,past_due
+txn_2026_10043,cus_1043,4980,JPY,2026-05-19T08:47:22Z,do_not_honor,Issuer declined: do not honor,2,2026-04-10T00:21:00Z,active
+txn_2026_10044,cus_1044,2980,JPY,2026-05-10T15:18:11Z,expired_card,Card has expired,4,2026-04-30T03:38:00Z,active
+txn_2026_10045,cus_1045,29800,JPY,2026-05-11T19:01:21Z,card_update_required,Card network signaled update required,4,2026-04-06T09:15:00Z,active
+txn_2026_10046,cus_1046,4980,JPY,2026-05-14T09:20:04Z,expired_card,Card has expired,3,2026-04-07T01:49:00Z,active
+txn_2026_10047,cus_1047,29800,JPY,2026-05-24T02:09:33Z,payment_method_required,Customer has no active payment method,3,2026-04-05T02:31:00Z,active
+txn_2026_10048,cus_1048,980,JPY,2026-05-04T06:01:31Z,generic_decline,Generic decline by issuer,2,2026-04-30T03:25:00Z,paused
+txn_2026_10049,cus_1049,14800,JPY,2026-05-04T19:27:20Z,do_not_honor,Issuer declined: do not honor,4,2026-04-05T19:58:00Z,paused
+txn_2026_10050,cus_1050,2980,JPY,2026-05-22T02:53:30Z,generic_decline,Generic decline by issuer,2,2026-04-24T13:14:00Z,paused
+txn_2026_10051,cus_1051,14800,JPY,2026-05-12T14:46:39Z,payment_method_required,Customer has no active payment method,4,2026-04-15T03:55:00Z,active
+txn_2026_10052,cus_1052,2980,JPY,2026-05-20T04:32:35Z,expired_card,Card has expired,4,2026-04-02T01:03:00Z,past_due
+txn_2026_10053,cus_1053,4980,JPY,2026-05-22T08:42:55Z,issuer_unavailable,Issuer temporarily unavailable,2,2026-04-29T04:16:00Z,active
+txn_2026_10054,cus_1054,4980,JPY,2026-05-23T18:52:19Z,expired_card,Card has expired,2,2026-04-05T10:03:00Z,active
+txn_2026_10055,cus_1055,980,JPY,2026-05-19T09:32:35Z,card_update_required,Card network signaled update required,2,2026-04-23T09:29:00Z,active
+txn_2026_10056,cus_1056,1980,JPY,2026-05-22T09:21:59Z,generic_decline,Generic decline by issuer,3,2026-04-13T13:42:00Z,past_due
+txn_2026_10057,cus_1057,4980,JPY,2026-05-11T00:14:39Z,authentication_required,3D Secure authentication required,2,2026-04-08T19:37:00Z,active
+txn_2026_10058,cus_1058,980,JPY,2026-05-05T02:04:14Z,authentication_required,3D Secure authentication required,2,2026-04-30T00:39:00Z,active
+txn_2026_10059,cus_1059,14800,JPY,2026-05-13T12:51:54Z,processing_error,Processing error,1,2026-04-03T21:18:00Z,active
+txn_2026_10060,cus_1060,980,JPY,2026-05-22T11:10:20Z,temporary_failure,Temporary processing failure,3,2026-04-16T11:56:00Z,active
+txn_2026_10061,cus_1061,4980,JPY,2026-05-26T23:12:05Z,insufficient_funds,Insufficient funds,1,2026-04-18T02:57:00Z,active
+txn_2026_10062,cus_1062,2980,JPY,2026-05-23T18:49:53Z,card_declined_authentication,Issuer declined authentication,2,2026-04-11T03:44:00Z,active
+txn_2026_10063,cus_1063,14800,JPY,2026-05-08T22:23:45Z,expired_card,Card has expired,4,2026-04-07T10:22:00Z,past_due
+txn_2026_10064,cus_1064,29800,JPY,2026-05-13T19:10:00Z,card_update_required,Card network signaled update required,3,2026-04-11T23:46:00Z,active
+txn_2026_10065,cus_1065,9800,JPY,2026-05-16T22:54:19Z,expired_card,Card has expired,4,2026-04-28T05:37:00Z,active
+txn_2026_10066,cus_1066,9800,JPY,2026-05-06T10:21:55Z,do_not_honor,Issuer declined: do not honor,3,2026-04-29T22:57:00Z,active
+txn_2026_10067,cus_1067,980,JPY,2026-05-21T03:07:26Z,lost_card,Lost card reported,2,2026-04-21T01:52:00Z,past_due
+txn_2026_10068,cus_1068,1980,JPY,2026-05-25T02:11:58Z,do_not_honor,Issuer declined: do not honor,4,2026-04-06T10:29:00Z,active
+txn_2026_10069,cus_1069,9800,JPY,2026-05-03T01:14:43Z,do_not_honor,Issuer declined: do not honor,3,2026-04-28T09:33:00Z,active
+txn_2026_10070,cus_1070,9800,JPY,2026-05-01T16:21:18Z,do_not_honor,Issuer declined: do not honor,2,2026-04-18T08:33:00Z,active
+txn_2026_10071,cus_1071,9800,JPY,2026-05-17T14:07:44Z,card_declined_authentication,Issuer declined authentication,4,2026-04-15T20:19:00Z,active
+txn_2026_10072,cus_1072,980,JPY,2026-05-24T03:56:36Z,processing_error,Processing error,3,2026-04-14T08:59:00Z,active
+txn_2026_10073,cus_1073,29800,JPY,2026-05-22T16:01:34Z,issuer_unavailable,Issuer temporarily unavailable,3,2026-04-23T19:20:00Z,active
+txn_2026_10074,cus_1074,2980,JPY,2026-05-11T03:13:02Z,expired_card,Card has expired,2,2026-04-26T19:24:00Z,active
+txn_2026_10075,cus_1075,980,JPY,2026-05-11T05:34:03Z,insufficient_funds,Insufficient funds,2,2026-04-21T18:38:00Z,past_due
+txn_2026_10076,cus_1076,2980,JPY,2026-05-03T22:00:48Z,stolen_card,Stolen card reported,1,2026-04-12T19:24:00Z,canceled
+txn_2026_10077,cus_1077,2980,JPY,2026-05-06T01:54:10Z,card_declined_authentication,Issuer declined authentication,4,2026-04-06T05:46:00Z,active
+txn_2026_10078,cus_1078,980,JPY,2026-05-17T14:44:11Z,generic_decline,Generic decline by issuer,4,2026-04-02T18:03:00Z,past_due
+txn_2026_10079,cus_1079,9800,JPY,2026-05-04T11:26:38Z,unknown,Unknown error,1,2026-04-07T12:01:00Z,active
+txn_2026_10080,cus_1080,29800,JPY,2026-05-11T19:21:55Z,lost_card,Lost card reported,2,2026-04-13T10:46:00Z,canceled
