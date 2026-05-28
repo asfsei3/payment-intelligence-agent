@@ -172,6 +172,57 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* AI responsibility split */}
+      <section className="card-elev p-6 md:p-8">
+        <div className="flex items-end justify-between mb-5">
+          <h2 className="heading-2">AIを使う場所 / 使わない場所</h2>
+          <span className="text-xs text-moss-200/70">
+            Rule-first, AI-assisted の設計判断
+          </span>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="card p-5 border-moss-400/30">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-moss-300 text-lg">●</span>
+              <span className="text-moss-100 font-semibold text-sm">
+                ルールで確定するもの
+              </span>
+              <span className="ml-auto text-[10px] text-moss-300/80 font-mono">
+                rule-based
+              </span>
+            </div>
+            <ul className="text-sm text-moss-200 leading-relaxed flex flex-col gap-1.5">
+              <li className="flex gap-2"><span className="text-moss-300">✓</span>安全確認 (PAN検出 / 必須カラム)</li>
+              <li className="flex gap-2"><span className="text-moss-300">✓</span>エラー分類</li>
+              <li className="flex gap-2"><span className="text-moss-300">✓</span>金額・売上影響の計算</li>
+              <li className="flex gap-2"><span className="text-moss-300">✓</span>危険取引の除外</li>
+            </ul>
+          </div>
+          <div className="card p-5 border-gold-500/30">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-gold-300 text-lg">●</span>
+              <span className="text-moss-100 font-semibold text-sm">
+                Azure OpenAI で生成するもの
+              </span>
+              <span className="ml-auto text-[10px] text-gold-300/90 font-mono">
+                Azure OpenAI
+              </span>
+            </div>
+            <ul className="text-sm text-moss-200 leading-relaxed flex flex-col gap-1.5">
+              <li className="flex gap-2"><span className="text-gold-300">✓</span>顧客対応文の下書き</li>
+              <li className="flex gap-2"><span className="text-gold-300">✓</span>経営者向けブリーフィング本文</li>
+              <li className="flex gap-2"><span className="text-gold-300">✓</span>再発防止提案の文章</li>
+              <li className="flex gap-2"><span className="text-gold-300">✓</span>シナリオ別の推奨文言</li>
+            </ul>
+          </div>
+        </div>
+        <p className="mt-4 text-xs text-moss-200/80 leading-relaxed">
+          決済領域では、分類・金額・危険判定をAIに丸投げすると誤分類や数字の hallucination が直接お金と顧客体験に響きます。
+          <strong className="text-moss-100">AIを使わない場所まで設計すること</strong>
+          が、実務に乗せられる安全性を担保するうえで本質だと考えています。
+        </p>
+      </section>
+
       {/* Final CTA */}
       <section className="text-center flex flex-col items-center gap-3 pt-2">
         <span className="text-xs text-moss-200/70 uppercase tracking-[0.2em]">
