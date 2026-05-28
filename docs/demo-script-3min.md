@@ -14,7 +14,7 @@
 
 | Time | Section | Screen | Talking points |
 | --- | --- | --- | --- |
-| **0:00–0:20** | Problem | Landing page hero | サブスク事業者の決済エラー対応は、PSP管理画面・CSV・顧客対応・経営報告に分断されがちです。Revenue Leakageの大きな要因が、この「断片化」です。 |
+| **0:00–0:20** | Problem | Landing page hero | サブスク事業者の決済エラー対応は、PSP管理画面・CSV・顧客対応・経営報告に分断されがちです。売上の取りこぼしの大きな要因が、この「断片化」です。 |
 | **0:20–0:40** | Product | Landing page right column | Payment Intelligence Agentは、7つのAIエージェントが順に処理を進める **AI Revenue Ops Desk** です。安全確認から再発防止までを一気通貫で整理します。 |
 | **0:40–1:10** | Upload & Safety | Click **「サンプルCSVで30秒デモを開始」** → Upload page | サンプルCSV80件を読み込みました。Safety Agentが事前にチェックします — PANらしき値が含まれていれば、ここで分析を停止します。今回は問題なし。**「分析を開始」**。 |
 | **1:10–1:40** | Agent Timeline | `/analyze/[id]/timeline` | 7つのエージェントが順に動きます。各エージェントの所要時間・AI利用有無が記録されます。重要なのは **Rule-first, AI-assisted** という設計 — 分類や売上影響は決定的ルールで、AIは経営者向け文言と下書き生成だけに使います。 |

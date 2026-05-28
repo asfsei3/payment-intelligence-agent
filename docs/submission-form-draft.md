@@ -66,7 +66,7 @@ Payment Intelligence Agentは、サブスクリプション事業者の決済エ
 ### B-3 600 字以内(長)
 
 ```
-サブスクリプション事業者の決済エラー対応は、PSP管理画面・CSV・顧客対応・経営報告に分断されがちです。この「断片化」がRevenue Leakageの大きな要因の一つだと考え、Payment Intelligence Agentを設計しました。
+サブスクリプション事業者の決済エラー対応は、PSP管理画面・CSV・顧客対応・経営報告に分断されがちです。この「断片化」が売上の取りこぼし(Revenue Leakage)の大きな要因の一つだと考え、Payment Intelligence Agentを設計しました。
 
 マスク済みのエラーCSVをアップロードすると、Safety / Classification / Revenue Impact / Customer Recovery / Ops Task / Executive Reporting / Prevention の7つのAIエージェントが順に処理を進め、以下を1つのワークフローで生成します:ダッシュボード、Today's Action Plan、経営者向けMarkdownブリーフィング、Scenario Simulator(顧客体験/売上回収/リスク最小化)、顧客対応下書き、再発防止提案。
 
@@ -84,7 +84,7 @@ Azure Container Apps上で動作し、Azure OpenAI環境変数が未設定でも
 ### C-1 解決したい課題(Problem)
 
 ```
-サブスクリプション事業者の決済エラー対応は、PSP管理画面、CSV抽出、表計算での集計、CSによる個別判断、経営報告の取りまとめ等、複数のツールと担当者にまたがって分断されています。この断片化により、対応の優先順位付けが属人化し、Revenue Leakageの全体像が経営に届かず、再発防止まで踏み込めない状態が続いています。
+サブスクリプション事業者の決済エラー対応は、PSP管理画面、CSV抽出、表計算での集計、CSによる個別判断、経営報告の取りまとめ等、複数のツールと担当者にまたがって分断されています。この断片化により、対応の優先順位付けが属人化し、売上の取りこぼしの全体像が経営に届かず、再発防止まで踏み込めない状態が続いています。
 ```
 
 ### C-2 提供する解決策(Solution)

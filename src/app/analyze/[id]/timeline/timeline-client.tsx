@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { AgentName, AgentRun } from "@/lib/types";
 
 interface Props {
@@ -31,10 +31,13 @@ const AGENT_ROLE_JA: Record<AgentName, string> = {
 };
 
 // Animate one agent reveal at a time; auto-advance to dashboard at the end.
+// Pass `?demo=1` to disable auto-advance (used by the demo-recording script).
 export function TimelineClient({ analysisId, runs, aiMode }: Props) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const demoMode = searchParams.get("demo") === "1";
   const [revealed, setRevealed] = useState(0);
-  const [autoAdvance, setAutoAdvance] = useState(true);
+  const [autoAdvance, setAutoAdvance] = useState(!demoMode);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {

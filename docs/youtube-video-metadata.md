@@ -55,7 +55,7 @@ https://pia-demo-51ff8c.bluebush-37a0c845.japaneast.azurecontainerapps.io
 🎯 解決したい課題
 
 サブスクリプション事業者の決済エラー対応は、PSP管理画面・CSV・顧客対応・経営報告に分断されがちです。
-この「断片化」が、Revenue Leakage の最大要因の一つだと考えました。
+この「断片化」が、売上の取りこぼし(Revenue Leakage)の最大要因の一つだと考えました。
 
 🤖 提供する解決策
 

@@ -1,5 +1,5 @@
 // In-memory analysis store. Persisted only for the process lifetime.
-// Sufficient for a hackathon demo running on a single App Service instance.
+// Sufficient for a hackathon demo running on a single Container Apps instance.
 //
 // We attach the Map to globalThis on purpose: in Next.js dev mode (and across
 // some HMR boundaries), route bundles can get distinct module instances. A

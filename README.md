@@ -24,7 +24,7 @@ Microsoft Agent Hackathon 2026 prototype.
 - 顧客対応はCSが個別判断する
 - 経営報告は別途まとめ直す
 
-この**断片化**こそが、Revenue Leakageの最大要因の一つです。
+この**断片化**こそが、売上の取りこぼし(Revenue Leakage)の最大要因の一つです。
 Payment Intelligence Agentは、マスク済みCSVを起点に、
 **安全確認 → 分類 → 売上影響 → 顧客対応 → 経営報告 → 再発防止**までを
 AIエージェントが一気通貫で整理します。

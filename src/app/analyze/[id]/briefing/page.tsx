@@ -31,7 +31,7 @@ export default function BriefingPage({ params, searchParams }: Props) {
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="heading-2">今月のRevenue Leakage Briefing</h2>
+          <h2 className="heading-2">今月の決済エラー対応レポート</h2>
           <p className="text-sm text-moss-200/80 mt-1 max-w-2xl">
             Azure OpenAIを用いて生成した経営者向けの1ページサマリーです（mock応答もサポート）。
             内容はScenarioに応じてトーンが変化します。

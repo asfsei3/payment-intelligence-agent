@@ -155,7 +155,7 @@ export default function LandingPage() {
           <div>
             <span className="section-title">Azure Native</span>
             <p className="mt-2 text-sm text-moss-200 leading-relaxed">
-              Azure App Service上で動作し、Azure OpenAIを呼び出します。
+              Azure Container Apps上で動作し、Azure OpenAIを呼び出します。
               環境変数が未設定の場合はmock応答にフォールバックし、
               <strong className="text-moss-100">デモが必ず動作</strong>します。
             </p>

@@ -27,20 +27,20 @@ published: false
 
 サブスクリプション事業者にとって、決済エラーへの対応は地味で、しかし極めて重要な仕事です。
 PSPの管理画面を開き、CSVを抜き出し、表計算ソフトで集計し、顧客対応をCSが個別判断し、経営報告は別途まとめ直す——
-こうした**断片化**こそが、Revenue Leakageの最大要因の一つだと考えています。
+こうした**断片化**こそが、Revenue Leakage(売上の取りこぼし)の最大要因の一つだと考えています。
 
 本稿では、Microsoft Agent Hackathon 2026 に応募したプロトタイプ
 **Payment Intelligence Agent** について、設計の意図と実装の工夫を紹介します。
 
-<!-- 公開前TODO: 下のリンクを公開アプリURLに置き換え -->
-🔗 デモアプリ: `https://pia-demo-51ff8c.bluebush-37a0c845.japaneast.azurecontainerapps.io`
+🔗 デモアプリ: https://pia-demo-51ff8c.bluebush-37a0c845.japaneast.azurecontainerapps.io
+(Azure Container Apps の FQDN。固定で変わりません)
 
 ## 2. 解決したい課題
 
 - **PSPと自社DBのステータス差分**を毎月確認するのが手作業
 - **エラーコードごとの対応方針**が担当者の経験知に依存
 - **顧客対応文面**が毎回スクラッチで書かれる
-- **経営報告**でRevenue Leakageの全体像が見えない
+- **経営報告**で売上の取りこぼしの全体像が見えない
 - **再発防止**まで踏み込めていない
 
 これらを「1つのワークフロー」に統合できれば、Revenue Operationsとして再設計できるはず——という仮説です。

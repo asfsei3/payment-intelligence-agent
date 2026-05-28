@@ -135,7 +135,7 @@ function mockBriefing(s: AiSummary, items: ActionItem[]): ExecutiveBriefing {
   const tone = SCENARIO_TONE_JA[s.scenario];
 
   const md = [
-    `# 今月のRevenue Leakage Briefing`,
+    `# 今月の決済エラー対応レポート`,
     ``,
     `**Scenario:** ${SCENARIO_LABEL_JA[s.scenario]}`,
     ``,
@@ -301,7 +301,7 @@ export async function generateBriefing(
   }
   try {
     const user = `以下は決済エラー分析の集計結果です。経営者向けの1ページサマリー（Markdown）を生成してください。
-- 見出し: 「今月のRevenue Leakage Briefing」
+- 見出し: 「今月の決済エラー対応レポート」
 - 含める項目: 決済エラー総額、対応余地、顧客対応が必要、リトライ非推奨、主なリスク、推奨される次の一手、次月の予防アクション
 - シナリオ「${SCENARIO_LABEL_JA[summary.scenario]}」のトーンを反映してください。
 - 最後に「本ブリーフィングは下書きであり、決済処理・リトライ実行・顧客への自動送信は行いません」と明記してください。
