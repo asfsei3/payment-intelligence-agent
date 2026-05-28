@@ -166,7 +166,7 @@ https://youtu.be/<video-id>
 ### E-4 GitHub リポジトリURL(任意・推奨)
 
 ```
-https://github.com/<your-handle>/payment-intelligence-agent
+https://github.com/asfsei3/payment-intelligence-agent
 ```
 
 ### E-5 デモ認証情報
