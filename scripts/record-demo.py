@@ -12,7 +12,7 @@ DOM nodes (no narration). Static slides use a separate HTML page with a
 2-stage transition (hide → 400ms gap → show) to avoid overlap residue.
 
 Outputs:
-  build/demo-video/pia-demo-3min.mp4  (~3:24, H.264, 1440x900)
+  build/demo-video/pia-demo-3min.mp4  (~3:24, H.264, 1920x1080, CRF 16)
 """
 from __future__ import annotations
 import os
@@ -27,7 +27,8 @@ BASE = os.environ.get("PIA_BASE", "https://pia-demo-51ff8c.bluebush-37a0c845.jap
 ANALYSIS_ID = "PLACEHOLDER_ID"  # overwritten via env or auto-created
 OUT_DIR = Path(__file__).resolve().parent.parent / "build" / "demo-video"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
-VIEWPORT = {"width": 1440, "height": 900}
+VIEWPORT = {"width": 1920, "height": 1080}
+DEVICE_SCALE_FACTOR = 2  # Retina-grade rendering, downscaled to video size
 
 # ---------------------------------------------------------------------------
 # Static slides (Act I + II + IV) — single HTML page, switched via JS
@@ -43,93 +44,93 @@ html,body{width:100%;height:100%;background:var(--forest-deep);
   overflow:hidden;}
 
 .slide{position:absolute;inset:0;
-  flex-direction:column;justify-content:center;align-items:center;padding:72px;
+  flex-direction:column;justify-content:center;align-items:center;padding:96px;
   display:none;pointer-events:none;}
 .slide.active{display:flex;}
 
-.eyebrow{color:var(--gold);font-size:16px;letter-spacing:.32em;
-  text-transform:uppercase;margin-bottom:24px;font-weight:600;}
-h1{font-size:64px;font-weight:800;letter-spacing:.02em;line-height:1.15;
-  text-align:center;margin-bottom:24px;}
-h2{font-size:42px;font-weight:700;line-height:1.45;text-align:center;
-  margin-bottom:28px;max-width:1100px;
+.eyebrow{color:var(--gold);font-size:20px;letter-spacing:.32em;
+  text-transform:uppercase;margin-bottom:32px;font-weight:600;}
+h1{font-size:88px;font-weight:800;letter-spacing:.02em;line-height:1.15;
+  text-align:center;margin-bottom:32px;}
+h2{font-size:54px;font-weight:700;line-height:1.45;text-align:center;
+  margin-bottom:36px;max-width:1480px;
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
-.sub{font-size:22px;line-height:1.75;color:rgba(255,248,229,.82);
-  text-align:center;max-width:880px;
+.sub{font-size:28px;line-height:1.75;color:rgba(255,248,229,.85);
+  text-align:center;max-width:1200px;
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
 .stat{color:var(--gold);font-weight:800;}
 
-.people-grid{display:grid;grid-template-columns:repeat(20,1fr);gap:8px;
-  margin:28px 0;max-width:680px;}
-.person{width:24px;height:24px;border-radius:50%;background:rgba(255,248,229,.18);}
-.person.fail{background:#d8584b;box-shadow:0 0 12px rgba(216,88,75,.5);}
+.people-grid{display:grid;grid-template-columns:repeat(20,1fr);gap:10px;
+  margin:36px 0;max-width:900px;}
+.person{width:32px;height:32px;border-radius:50%;background:rgba(255,248,229,.18);}
+.person.fail{background:#d8584b;box-shadow:0 0 14px rgba(216,88,75,.5);}
 
-.flow{display:flex;align-items:center;justify-content:center;gap:24px;
-  margin:28px 0;flex-wrap:wrap;}
-.flow .step{padding:16px 22px;border:1px solid var(--gold);border-radius:6px;
-  font-size:18px;font-weight:600;background:rgba(201,168,76,.08);}
+.flow{display:flex;align-items:center;justify-content:center;gap:30px;
+  margin:36px 0;flex-wrap:wrap;}
+.flow .step{padding:20px 28px;border:1px solid var(--gold);border-radius:8px;
+  font-size:24px;font-weight:600;background:rgba(201,168,76,.08);}
 .flow .step.bad{border-color:#d8584b;color:#ffb8b0;background:rgba(216,88,75,.08);}
-.flow .arrow{font-size:24px;color:var(--gold);}
+.flow .arrow{font-size:32px;color:var(--gold);}
 
-.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
-  margin-top:36px;max-width:1100px;}
-.pain-card{background:rgba(255,248,229,.06);border-left:4px solid var(--gold);
-  padding:22px 26px;border-radius:6px;text-align:left;}
-.pain-card h3{font-size:19px;color:var(--gold);margin-bottom:8px;}
-.pain-card p{font-size:17px;line-height:1.6;color:rgba(255,248,229,.85);
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;
+  margin-top:44px;max-width:1480px;}
+.pain-card{background:rgba(255,248,229,.06);border-left:5px solid var(--gold);
+  padding:28px 32px;border-radius:8px;text-align:left;}
+.pain-card h3{font-size:26px;color:var(--gold);margin-bottom:10px;}
+.pain-card p{font-size:22px;line-height:1.6;color:rgba(255,248,229,.85);
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
 
-.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:48px;align-items:center;
-  margin-top:36px;max-width:1100px;}
-.vs-col{padding:30px;border-radius:8px;text-align:center;}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:60px;align-items:center;
+  margin-top:44px;max-width:1480px;}
+.vs-col{padding:38px;border-radius:10px;text-align:center;}
 .vs-col.abroad{background:rgba(201,168,76,.12);border:1px solid var(--gold);}
 .vs-col.japan{background:rgba(255,248,229,.04);border:1px dashed rgba(255,248,229,.3);}
-.vs-col .label{font-size:13px;letter-spacing:.22em;color:var(--gold);
-  text-transform:uppercase;margin-bottom:10px;}
-.vs-col .title{font-size:22px;font-weight:700;margin-bottom:14px;}
-.vs-col .desc{font-size:16px;line-height:1.6;color:rgba(255,248,229,.82);
+.vs-col .label{font-size:18px;letter-spacing:.22em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:12px;}
+.vs-col .title{font-size:30px;font-weight:700;margin-bottom:18px;}
+.vs-col .desc{font-size:22px;line-height:1.6;color:rgba(255,248,229,.85);
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
-.vs-arrow{font-size:32px;color:var(--gold);}
+.vs-arrow{font-size:42px;color:var(--gold);}
 
-.agents-row{display:flex;justify-content:center;gap:14px;margin:28px 0;
-  flex-wrap:wrap;max-width:1200px;}
-.agent-chip{padding:12px 16px;border:1px solid var(--gold);border-radius:6px;
-  font-size:14px;background:rgba(201,168,76,.06);min-width:120px;text-align:center;}
-.agent-chip .icon{font-size:24px;display:block;margin-bottom:4px;}
+.agents-row{display:flex;justify-content:center;gap:18px;margin:36px 0;
+  flex-wrap:wrap;max-width:1600px;}
+.agent-chip{padding:16px 20px;border:1px solid var(--gold);border-radius:8px;
+  font-size:19px;background:rgba(201,168,76,.06);min-width:160px;text-align:center;}
+.agent-chip .icon{font-size:32px;display:block;margin-bottom:6px;}
 
-.do-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px;
-  max-width:1000px;}
-.do-col{padding:24px 28px;border-radius:8px;}
+.do-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-top:42px;
+  max-width:1340px;}
+.do-col{padding:32px 36px;border-radius:10px;}
 .do-col.nope{background:rgba(216,88,75,.1);border:1px solid #d8584b;}
 .do-col.yep{background:rgba(120,180,120,.1);border:1px solid #7eb47e;}
-.do-col h4{font-size:20px;margin-bottom:14px;}
+.do-col h4{font-size:28px;margin-bottom:18px;}
 .do-col.nope h4{color:#ffb8b0;}
 .do-col.yep h4{color:#a8d4a8;}
-.do-col ul{list-style:none;font-size:17px;line-height:1.9;color:rgba(255,248,229,.9);
+.do-col ul{list-style:none;font-size:22px;line-height:1.9;color:rgba(255,248,229,.9);
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
 .do-col li::before{content:"●  ";color:inherit;}
 
-.closing-list{display:flex;flex-direction:column;gap:16px;margin-top:24px;
-  max-width:1000px;text-align:left;}
-.closing-item{padding:18px 24px;background:rgba(255,248,229,.06);
-  border-left:4px solid var(--gold);border-radius:6px;
-  font-size:20px;line-height:1.55;
+.closing-list{display:flex;flex-direction:column;gap:20px;margin-top:32px;
+  max-width:1380px;text-align:left;}
+.closing-item{padding:24px 32px;background:rgba(255,248,229,.06);
+  border-left:5px solid var(--gold);border-radius:8px;
+  font-size:26px;line-height:1.55;
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;}
-.closing-item .num{color:var(--gold);font-weight:800;margin-right:14px;}
+.closing-item .num{color:var(--gold);font-weight:800;margin-right:18px;}
 .closing-item .em{color:var(--gold);font-weight:700;}
 
-.endcard h1{font-size:72px;}
-.endcard .url{margin-top:32px;font-size:18px;color:var(--gold);
-  letter-spacing:.05em;padding:10px 20px;border:1px solid var(--gold);
-  border-radius:4px;}
-.endcard .powered{margin-top:24px;font-size:14px;color:rgba(255,248,229,.55);
+.endcard h1{font-size:96px;}
+.endcard .url{margin-top:42px;font-size:24px;color:var(--gold);
+  letter-spacing:.05em;padding:14px 26px;border:1px solid var(--gold);
+  border-radius:6px;}
+.endcard .powered{margin-top:32px;font-size:18px;color:rgba(255,248,229,.55);
   letter-spacing:.04em;}
 
-.corner{position:fixed;top:24px;right:32px;background:rgba(201,168,76,.15);
-  color:var(--gold);padding:8px 16px;border-radius:4px;font-size:13px;
+.corner{position:fixed;top:32px;right:42px;background:rgba(201,168,76,.15);
+  color:var(--gold);padding:10px 20px;border-radius:6px;font-size:17px;
   font-weight:600;letter-spacing:.05em;border:1px solid var(--gold);
   z-index:99999;pointer-events:none;}
-.footer-note{position:absolute;bottom:48px;font-size:14px;
+.footer-note{position:absolute;bottom:64px;font-size:18px;
   color:rgba(255,248,229,.55);letter-spacing:.04em;}
 """
 
@@ -162,7 +163,7 @@ SLIDE_HTML = """
   <div class="flow" style="margin:24px 0;">
     <div class="step">決済失敗</div>
     <div class="arrow">→</div>
-    <div class="step">4ツールに散在<br/><span style="font-size:12px;opacity:.7;">画面/CSV/CS/報告</span></div>
+    <div class="step">4ツールに散在<br/><span style="font-size:16px;opacity:.7;">画面/CSV/CS/報告</span></div>
     <div class="arrow">→</div>
     <div class="step bad">請求できなかった売上</div>
   </div>
@@ -181,7 +182,7 @@ SLIDE_HTML = """
     <div class="agent-chip"><span class="icon">📊</span>経営報告</div>
     <div class="agent-chip"><span class="icon">🔁</span>再発防止</div>
   </div>
-  <p class="sub" style="margin-top:14px;font-size:18px;">マスク済みCSVを入れるだけで、<span class="stat">分類・金額集計はルールで確定</span>、<span class="stat">文章生成だけAI</span>が担当。決済処理には一切触らず、整理・提案・下書きに限定。</p>
+  <p class="sub" style="margin-top:18px;font-size:24px;">マスク済みCSVを入れるだけで、<span class="stat">分類・金額集計はルールで確定</span>、<span class="stat">文章生成だけAIが担当</span>。決済処理には一切触らず、整理・提案・下書きに限定。</p>
 </div>
 
 <div class="slide" id="s8">
@@ -230,35 +231,36 @@ SLIDE_HTML = SLIDE_HTML.replace("__CSS__", SLIDE_CSS).replace("__PEOPLE__", _PEO
 # ---------------------------------------------------------------------------
 TELOP_CSS = """
 #pia-telop {
-  position: fixed; left: 0; right: 0; bottom: 36px;
+  position: fixed; left: 0; right: 0; bottom: 48px;
   display: flex; justify-content: center; pointer-events: none;
   z-index: 99999; font-family: 'Hiragino Sans','Noto Sans JP',sans-serif;
 }
 #pia-telop .inner {
   background: rgba(12, 31, 21, 0.94);
   color: #fff8e5;
-  padding: 14px 28px;
-  border-left: 4px solid #c9a84c;
-  border-radius: 6px;
-  font-size: 23px;
+  padding: 20px 38px;
+  border-left: 6px solid #c9a84c;
+  border-radius: 8px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  max-width: 90%;
+  box-shadow: 0 10px 38px rgba(0,0,0,0.5);
+  max-width: 88%;
   text-align: center;
+  line-height: 1.45;
   transition: opacity .25s ease;
   opacity: 0;
 }
 #pia-telop .inner.show { opacity: 1; }
 #pia-corner {
-  position: fixed; top: 24px; right: 32px;
+  position: fixed; top: 32px; right: 42px;
   background: rgba(26,71,49,0.92);
   color: #fff8e5;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 6px;
   font-family: 'Hiragino Sans','Noto Sans JP',sans-serif;
-  font-size: 13px; font-weight: 600;
+  font-size: 17px; font-weight: 600;
   z-index: 99999; pointer-events: none;
   letter-spacing: 0.05em;
 }
@@ -345,6 +347,7 @@ def main() -> None:
             viewport=VIEWPORT,
             record_video_dir=str(OUT_DIR),
             record_video_size=VIEWPORT,
+            device_scale_factor=DEVICE_SCALE_FACTOR,
             locale="ja-JP",
         )
         # Block the timeline page's auto-redirect to /dashboard. The recording
@@ -399,7 +402,7 @@ def main() -> None:
         # once all agents finish, then click it within the 1.4s redirect window.
         # The init_script pushState block above is a belt-and-suspenders backup.
         goto(page, f"/analyze/{analysis_id}/timeline")
-        telop(page, "7つの AI エージェントが順番に処理する様子")
+        telop(page, "毎月の決済エラー対応を、7つのエージェントが1つの流れに統合する")
         try:
             stop_btn = page.get_by_role("button", name="自動遷移を停止")
             stop_btn.wait_for(state="visible", timeout=15000)
@@ -407,30 +410,30 @@ def main() -> None:
         except Exception as e:
             print(f"timeline: stop-button click failed ({e})", file=sys.stderr)
         time.sleep(9)
-        telop(page, "各エージェントの右ラベル: 「Azure OpenAI」= AI が文章生成 / 「rule-based」= ルールで分類・計算")
+        telop(page, "数字・分類はルールで確定し、Azure OpenAI は人が読む文章だけを書く")
         time.sleep(11)
-        telop(page, "安全確認→分類→売上影響→顧客対応→タスク化→経営報告→再発防止")
+        telop(page, "BI は『見せる』だけ。本作は『次に何をするか』までAIが整理して提案する")
         time.sleep(10)
 
         # Scene Dashboard (5s)
         goto(page, f"/analyze/{analysis_id}/dashboard")
-        telop(page, "請求できなかった売上の全体像 — カテゴリ別の内訳")
+        telop(page, "請求できなかった売上が、原因別に一目で見える")
         smooth_scroll(page, 400, 2500)
         time.sleep(2.5)
 
         # Scene Briefing (5s)
         goto(page, f"/analyze/{analysis_id}/briefing")
-        telop(page, "経営者向け1ページレポート — 数字はルールで確定し、言い間違いが起こらない")
+        telop(page, "経営報告の数字はルールで確定 — AIに書かせるのは本文だけ。金額の言い間違いが起きない")
         time.sleep(5)
 
         # Scene Drafts (6s)
         goto(page, f"/analyze/{analysis_id}/drafts")
-        telop(page, "顧客向け連絡文の下書き — 自動送信せず、担当者が確認して送る前提")
+        telop(page, "顧客対応文はAIが下書き。自動送信はせず、必ず担当者が確認してから送る")
         time.sleep(6)
 
         # Scene Scenario (9s)
         goto(page, f"/analyze/{analysis_id}/scenario")
-        telop(page, "「何を一番大事にするか」で優先順位が瞬時に並び替わる")
+        telop(page, "顧客体験・売上回収・リスク最小化 — 目的を切り替えるとタスクの順序が並び替わる")
         time.sleep(3)
         for label in ["売上回収重視", "リスク最小化", "顧客体験重視"]:
             try:
@@ -441,7 +444,7 @@ def main() -> None:
 
         # Scene Prevention (5s)
         goto(page, f"/analyze/{analysis_id}/prevention")
-        telop(page, "来月、同じ問題を減らすための運用改善案も自動で整理")
+        telop(page, "対症療法で終わらせない。来月の運用改善案までAIが言語化する")
         time.sleep(5)
 
         # ============ Act III — closing ============
@@ -470,8 +473,10 @@ def main() -> None:
     subprocess.run(
         [
             "ffmpeg", "-y", "-i", str(webm), "-ss", "2.5",
-            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20",
-            "-preset", "medium", "-movflags", "+faststart",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-crf", "16", "-preset", "slow",
+            "-profile:v", "high", "-level", "4.2",
+            "-movflags", "+faststart",
             str(mp4),
         ],
         check=True,
