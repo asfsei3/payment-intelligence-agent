@@ -9,10 +9,10 @@
 ## 0. 公開の前提(全部済んでいるはず)
 
 - [x] Azure Container Apps にデプロイ済み → https://pia-demo-51ff8c.bluebush-37a0c845.japaneast.azurecontainerapps.io
-- [x] 3分デモ動画を YouTube にアップロード済み → https://youtu.be/qQVKUWBQ5vk
+- [x] 3分デモ動画を YouTube にアップロード済み → https://youtu.be/z-VPX-kR6c8
 - [x] GitHub リポジトリを public 公開済み → https://github.com/asfsei3/payment-intelligence-agent
 - [x] アプリURL / GitHub URL は記事内に埋め込み済み
-- [x] YouTube 動画ID `qQVKUWBQ5vk` は記事内 2 箇所に埋め込み済み
+- [x] YouTube 動画ID `z-VPX-kR6c8` は記事内 2 箇所に埋め込み済み
 
 公開時に最後にやることは **frontmatter の `published: false` → `true` フリップ** だけです。
 

@@ -160,7 +160,7 @@ https://zenn.dev/<your-handle>/articles/<slug>
 ### E-3 3分デモ動画URL(YouTube、必須)
 
 ```
-https://youtu.be/<video-id>
+https://youtu.be/z-VPX-kR6c8
 ```
 
 ### E-4 GitHub リポジトリURL(任意・推奨)
