@@ -398,20 +398,15 @@ def main() -> None:
         # ============ Act II (0:30 - 2:40) — focused demo (6 scenes) ============
 
         # Scene Timeline (30s) — core: 7 agents in motion (the hero scene)
-        # Disable auto-redirect: wait for the "自動遷移を停止" button to appear
-        # once all agents finish, then click it within the 1.4s redirect window.
-        # The init_script pushState block above is a belt-and-suspenders backup.
-        goto(page, f"/analyze/{analysis_id}/timeline")
+        # Use ?demo=1 to disable auto-redirect at the React level. This is the
+        # authoritative fix — the pushState init_script doesn't catch Next.js
+        # router internals, and waiting for the stop button doesn't work in
+        # demo mode (button is hidden when autoAdvance=false).
+        goto(page, f"/analyze/{analysis_id}/timeline?demo=1")
         telop(page, "毎月の決済エラー対応を、7つのエージェントが1つの流れに統合する")
-        try:
-            stop_btn = page.get_by_role("button", name="自動遷移を停止")
-            stop_btn.wait_for(state="visible", timeout=15000)
-            stop_btn.click(timeout=1000, no_wait_after=True)
-        except Exception as e:
-            print(f"timeline: stop-button click failed ({e})", file=sys.stderr)
-        time.sleep(9)
+        time.sleep(10)
         telop(page, "数字・分類はルールで確定し、Azure OpenAI は人が読む文章だけを書く")
-        time.sleep(11)
+        time.sleep(10)
         telop(page, "BI は『見せる』だけ。本作は『次に何をするか』までAIが整理して提案する")
         time.sleep(10)
 
