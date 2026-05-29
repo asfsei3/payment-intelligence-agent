@@ -154,7 +154,7 @@ https://pia-demo-51ff8c.bluebush-37a0c845.japaneast.azurecontainerapps.io
 ### E-2 Zenn 記事URL(必須)
 
 ```
-https://zenn.dev/<your-handle>/articles/<slug>
+https://zenn.dev/ai_orchestra/articles/267dbaa47e2d60
 ```
 
 ### E-3 3分デモ動画URL(YouTube、必須)
